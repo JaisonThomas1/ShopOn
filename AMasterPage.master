@@ -1,0 +1,420 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AMasterPage.master.cs" Inherits="AMasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ShopOn</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css"/>
+	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css"/>
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css"/>
+	<link rel="stylesheet" type="text/css" href="css/util.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            float: left;
+        }
+    </style>
+</head>
+<body class="animsition">
+    <form id="Form1" runat="server">
+    <header class="header-v3">
+		<!-- Header desktop -->
+		<div class="container-menu-desktop trans-03">
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop p-l-45">
+					
+					<!-- Logo desktop -->		
+					<a href="#" class="logo">
+						<section class="bg-img1 txt-center p-lr-15 p-tb-92">
+		                    <h5 class="ltext-105a cl0 txt-center">Angadi.Com</h5>
+	                    </section>
+					</a>
+
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li>
+								<a href="Ahome.aspx">Home</a>
+							</li>
+
+							<li>
+								<a href="#down">About</a>
+							</li>
+                            <li>
+                            <asp:LinkButton ID="LinkButton1" runat="server" class="bt mtext-102  stext-106 trans-04" 
+                            Height="35px" Width="80px" CausesValidation="False" PostBackUrl="Aaditem.aspx" Text="Add Item"></asp:LinkButton>
+						   
+							</li>
+                            <li>
+								<asp:LinkButton ID="LinkButton4" runat="server" class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11" CausesValidation="False" PostBackUrl="~/Aademp.aspx"><h6>Add Employee</h6></asp:LinkButton>
+							</li>
+                            <li>
+                            <asp:LinkButton ID="LinkButton2" runat="server" class="bt mtext-102  stext-106 trans-04" 
+                            Height="35px" Width="80px" CausesValidation="False" PostBackUrl="Areport.aspx" Text="Sale report"></asp:LinkButton>
+							</li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton5" runat="server" class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11" CausesValidation="False" PostBackUrl="~/Aviewe.aspx"><h6>View employee</h6></asp:LinkButton>
+						    </li>
+                            <li>
+						        <asp:LinkButton ID="LinkButton3" runat="server" class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11" CausesValidation="False" PostBackUrl="~/Achangep.aspx"><h6>Change Password</h6></asp:LinkButton> 
+							</li>
+                            <li>
+                                <asp:Label ID="Label1" runat="server">ADMIN</asp:Label>
+							</li>
+                            <asp:Button ID="Button1" runat="server" class="stext-101 cl0 size-104a bg1 bor1" 
+                                     Text="Logout" Height="35px" Width="80px" 
+                                     CausesValidation="False" UseSubmitBehavior="False" 
+                                    onclick="Button1_Click" />
+                            <asp:Label ID="Label2" runat="server" Visible="False"></asp:Label>
+						    
+                        </ul>
+
+					</div>	
+				</nav>
+				<div class="top-bara">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar ">
+                        <ul class="main-menu">
+							<li>
+                            <asp:Button ID="Button2" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Vegetables" 
+                                    Height="35px" Width="80px" CausesValidation="False" onclick="Button2_Click"/>					    
+							</li>
+                            <li>
+						    <asp:Button ID="Button9" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Non-Veg" 
+                                    Height="35px" Width="80px" CausesValidation="False" onclick="Button9_Click"/>
+							</li>
+                            <li>
+						    <asp:Button ID="Button3" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Curry Powders" 
+                                    Height="35px" Width="80px" CausesValidation="False" onclick="Button3_Click"/>						    
+							</li>&nbsp&nbsp&nbsp
+                            <li>
+						    <asp:Button ID="Button4" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Rice" Height="35px" 
+                                    Width="80px" CausesValidation="False" onclick="Button4_Click"/>						    
+							</li>
+                            <li>
+						    <asp:Button ID="Button5" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Plates" Height="35px" 
+                                    Width="80px" CausesValidation="False" onclick="Button5_Click"/>
+							</li>
+                            <li>
+						    <asp:Button ID="Button6" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Kids Food" 
+                                    Height="35px" Width="80px" CausesValidation="False" onclick="Button6_Click"/>						    
+							</li>
+                            <li>
+						    <asp:Button ID="Button7" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Cleaning Items" 
+                                    Height="35px" Width="80px" CausesValidation="False" onclick="Button7_Click"/>				    
+							</li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <li>
+						    <asp:Button ID="Button8" runat="server" 
+                                    class="bt mtext-102 filter-link stext-106 trans-04" Text="Electronics" 
+                                    Height="35px" Width="80px" CausesValidation="False" onclick="Button8_Click"/>					    
+							</li>
+                        </ul>
+            		</div>
+				</div>
+			</div>
+
+			</div>	
+		</div>
+	</header>
+    <!-- Sidebar -->
+	<aside class="wrap-sidebar js-sidebar">
+		<div class="s-full js-hide-sidebar"></div>
+
+		<div class="sidebar flex-col-l p-t-22 p-b-25">
+			<div class="flex-r w-full p-b-30 p-r-27">
+				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-sidebar">
+					<i class="zmdi zmdi-close"></i>
+				</div>
+			</div>
+
+			<div class="sidebar-content flex-w w-full p-lr-65 js-pscroll">
+				<ul class="sidebar-link w-full">
+					<li class="p-b-13">
+						<a href="index.html" class="stext-102 cl2 hov-cl1 trans-04">
+							Home
+						</a>
+					</li>
+
+					<li class="p-b-13">
+						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
+							My Wishlist
+						</a>
+					</li>
+
+					<li class="p-b-13">
+						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
+							My Account
+						</a>
+					</li>
+
+					<li class="p-b-13">
+						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
+							Track Oder
+						</a>
+					</li>
+
+					<li class="p-b-13">
+						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
+							Refunds
+						</a>
+					</li>
+
+					<li class="p-b-13">
+						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
+							Help & FAQs
+						</a>
+					</li>
+				</ul>
+
+				<div class="sidebar-gallery w-full">
+					<span class="mtext-101 cl5">
+						About Us
+					</span>
+
+					<p class="stext-108 cl6 p-t-27">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus vulputate hendrerit. Praesent faucibus erat vitae rutrum gravida. Vestibulum tempus mi enim, in molestie sem fermentum quis. 
+					</p>
+				</div>
+			</div>
+		</div>
+	</aside>
+
+<br/><br/><br/><br/><br/><br/>
+
+<asp:ContentPlaceHolder ID="MainContent" runat="server">
+</asp:ContentPlaceHolder>
+
+	<!-- Footer -->
+	<footer class="bg3 p-t-75 p-b-32">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Categories
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Vegetables
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Non-Veg
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Curry Powders
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Kids Food
+							</a>
+						</li>
+					</ul>
+				</div>
+
+                <div id="down"></div>
+
+                <div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						What we are
+					</h4>
+                    <p class="stext-107 cl7 size-201">
+						We are a team who are working in a shop . We deliver items as per customer request at their home. 
+					</p>
+					
+				</div>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						GET IN TOUCH
+					</h4>
+
+					<p class="stext-107 cl7 size-201">
+						Any questions? Let us know<br /> at 8th floor, city building, Irrity,<br /> pin 665475 or call us<br /> on (+91) 9671668792
+					</p>
+
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-instagram"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-pinterest-p"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Contact
+					</h4>
+
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+                            <asp:Label class="input1 bg-none plh1 stext-107 cl7" ID="Label3" runat="server" Text="MAIL : angadi@gmail.com"></asp:Label><br />
+						    <div class="focus-input1 trans-04"></div>  
+                        <div class="focus-input1 trans-04"></div>
+						</div>
+                        <div class="wrap-input1 w-full p-b-4">
+                        <asp:Label class="input1 bg-none plh1 stext-107 cl7" ID="Label4" runat="server" Text="MOB  : 9857485123"></asp:Label>
+						    <div class="focus-input1 trans-04"></div>
+                        </div>
+                        <div class="wrap-input1 w-full p-b-4">
+                            <asp:Label class="input1 bg-none plh1 stext-107 cl7" ID="Label5" runat="server" Text="LANDLINE : 0432-2211554"></asp:Label>
+                        </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+	</div>
+
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+	    $(".js-select2").each(function () {
+	        $(this).select2({
+	            minimumResultsForSearch: 20,
+	            dropdownParent: $(this).next('.dropDownSelect2')
+	        });
+	    })
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/slick/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/parallax100/parallax100.js"></script>
+	<script>
+	    $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script>
+	    $('.gallery-lb').each(function () { // the containers for all your galleries
+	        $(this).magnificPopup({
+	            delegate: 'a', // the selector for gallery item
+	            type: 'image',
+	            gallery: {
+	                enabled: true
+	            },
+	            mainClass: 'mfp-fade'
+	        });
+	    });
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script>
+	    $('.js-addwish-b2').on('click', function (e) {
+	        e.preventDefault();
+	    });
+
+	    $('.js-addwish-b2').each(function () {
+	        var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+	        $(this).on('click', function () {
+	            swal(nameProduct, "is added to wishlist !", "success");
+
+	            $(this).addClass('js-addedwish-b2');
+	            $(this).off('click');
+	        });
+	    });
+
+	    $('.js-addwish-detail').each(function () {
+	        var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+	        $(this).on('click', function () {
+	            swal(nameProduct, "is added to wishlist !", "success");
+
+	            $(this).addClass('js-addedwish-detail');
+	            $(this).off('click');
+	        });
+	    });
+
+	    /*---------------------------------------------*/
+
+	    $('.js-addcart-detail').each(function () {
+	        var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+	        $(this).on('click', function () {
+	            swal(nameProduct, "is added to cart !", "success");
+	        });
+	    });
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			$(this).css('position','relative');
+			$(this).css('overflow','hidden');
+			var ps = new PerfectScrollbar(this, {
+				wheelSpeed: 1,
+				scrollingThreshold: 1000,
+				wheelPropagation: false,
+			});
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+
+
+
+    
+    </form>
+</body>
+</html>
